@@ -6,6 +6,7 @@ const btn = document.querySelector('.container button');
 const joke = document.querySelector('.container .joke p');
 const btnQuote = document.getElementById('btn_quote');
 const resultQuote = document.getElementById('quote_txt');
+const inputToggle = document.querySelector('.theme-switcher input');
 
 // logics
 document.addEventListener('DOMContentLoaded', function () {
@@ -36,3 +37,12 @@ async function fetchQuotes() {
 
   resultQuote.innerHTML = quoteObj.content;
 }
+
+// Toggle Theme logic
+inputToggle.addEventListener('change', (e) => {
+  if (e.target.checked) {
+    document.body.setAttribute('data-theme', 'dark');
+  } else {
+    document.body.setAttribute('data-theme', 'light');
+  }
+});
