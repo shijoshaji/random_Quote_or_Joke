@@ -38,7 +38,7 @@ async function fetchQuotes() {
   resultQuote.innerHTML = quoteObj.content;
 }
 
-// Toggle Theme logic
+// Toggle Theme
 inputToggle.addEventListener('change', (e) => {
   if (e.target.checked) {
     document.body.setAttribute('data-theme', 'dark');
